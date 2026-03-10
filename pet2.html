@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog & Dinosaur Playtime</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; background: #87CEEB; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+<script>
+    let dogX = 100;
+    let dinoX = -150;
+    let speed = 3;
+    let groundY;
+
+    function setup() {
+        createCanvas(windowWidth, windowHeight);
+        groundY = height - 100;
+    }
+
+    function draw() {
+        background(135, 206, 235); // Sky
+
+        // Grass
+        noStroke();
+        fill(34, 139, 34);
+        rect(0, groundY, width, 100);
+
+        // Movement
+        dogX += speed;
+        dinoX += speed;
+
+        if (dinoX > width) {
+            dinoX = -400;
+            dogX = -150;
+        }
+
+        drawDino(dinoX, groundY - 60);
+        drawDog(dogX, groundY - 20);
+        
+        // Sun
+        fill(255, 255, 0);
+        circle(width - 80, 80, 60);
+    }
+
+    function drawDog(x, y) {
+        push();
+        translate(x, y);
+        
+        // Animation bounce
+        let bounce = sin(frameCount * 0.2) * 5;
+        translate(0, bounce);
+
+        // Body
+        fill(139, 69, 19); // Brown
+        rect(0, 0, 40, 20, 5);
+        
+        // Legs
+        stroke(139, 69, 19);
+        strokeWeight(4);
+        line(5, 20, 5, 28 + bounce/2);
+        line(15, 20, 15, 28 + bounce/2);
+        line(25, 20, 25, 28 + bounce/2);
+        line(35, 20, 35, 28 + bounce/2);
+        
+        // Head
+        noStroke();
+        ellipse(45, 0, 20, 18);
+        
+        // Ear
+        fill(101, 67, 33);
+        ellipse(40, -5, 8, 12);
+        
+        // Tail
+        stroke(139, 69, 19);
+        line(0, 5, -10, -5 + bounce);
+        
+        // Eye
+        fill(0);
+        circle(48, -2, 3);
+        pop();
+    }
+
+    function drawDino(x, y) {
+        push();
+        translate(x, y);
+        
+        // Animation bounce
+        let bounce = sin(frameCount * 0.15) * 8;
+        translate(0, bounce);
+
+        // Body
+        fill(50, 205, 50); // Lime Green
+        beginShape();
+        vertex(0, 0);
+        bezierVertex(-20, -80, 60, -100, 80, 0); // Back
+        vertex(80, 60);
+        vertex(0, 60);
+        endShape(CLOSE);
+        
+        // Neck & Head
+        rect(70, -40, 20, 60, 10);
+        ellipse(90, -45, 35, 25);
+        
+        // Tail
+        beginShape();
+        vertex(0, 20);
+        vertex(-60, 60);
+        vertex(0, 60);
+        endShape(CLOSE);
+
+        // Spikes
+        fill(34, 139, 34);
+        triangle(20, -50, 30, -70, 40, -50);
+        triangle(45, -55, 55, -75, 65, -55);
+        
+        // Eye
+        fill(255);
+        circle(95, -50, 8);
+        fill(0);
+        circle(97, -50, 4);
+
+        // Legs
+        stroke(50, 205, 50);
+        strokeWeight(10);
+        line(20, 60, 20, 80 + bounce/2);
+        line(60, 60, 60, 80 + bounce/2);
+        pop();
+    }
+
+    function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+        groundY = height - 100;
+    }
+</script>
+</body>
+</html>

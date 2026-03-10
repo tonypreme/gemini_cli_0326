@@ -1,0 +1,34 @@
+ctrl + j = ขึ้นบรรทัดใหม่
+
+ตัวอย่าง: จังหวัดประเทศไทย
+save provine.txt
+
+---------
+
+หาจังหวัดปทุม @provine.txt
+
+---------
+
+fetch web data in url https://jsonplaceholder.typicode.com/
+
+---------
+
+/chat save province - checkpoint
+/chat resume province
+
+---------
+
+gemini --resume ** ดึงข้อมูลเก่าที่เคยพิมพ์ไว้ กับ project เดิม **
+
+---------
+
+create file present iphone14 ใช้ html save  iphone14.html
+!start iphone14.html ** เปิดเลย
+esc ออกไป
+
+---------
+
+สร้างเกมส์เปิดภาพทายคำ html+p5.js save pic.html
+วาดรูป หมากับ ไดโนเสาร์ โดยใช้ html+p5.js save pet.html
+วาดรูป หมาวิ่งเล่นกับไดโนเสาร์ html+p5.js save pet2.html
+ 

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Galaxy S25 Ultra | Next-Gen Flagship</title>
+    <style>
+        :root {
+            --primary: #000;
+            --secondary: #333;
+            --accent: #2196F3;
+            --bg: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #ddd, #bbb);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .card li span {
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .hero-image { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Samsung Galaxy S25 Ultra</h1>
+    <p>The Ultimate AI Smartphone</p>
+</header>
+
+<div class="container">
+    <div class="hero-image">
+        [ Galaxy S25 Ultra Presentation ]
+    </div>
+
+    <div class="specs-grid">
+        <div class="card">
+            <h3>Display & Design</h3>
+            <ul>
+                <li><span>Display</span>6.9" Dynamic LTPO AMOLED 2X, 120Hz, QHD+</li>
+                <li><span>Brightness</span>Up to 2,600 nits Peak</li>
+                <li><span>Build</span>Titanium Frame (Grade 5), Gorilla Armor 2</li>
+                <li><span>New Look</span>Ergonomic Rounded Corners</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Performance</h3>
+            <ul>
+                <li><span>Processor</span>Snapdragon 8 Elite for Galaxy</li>
+                <li><span>Memory</span>12GB / 16GB RAM</li>
+                <li><span>Storage</span>256GB / 512GB / 1TB (UFS 4.0)</li>
+                <li><span>OS</span>Android 15 with One UI 7</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Pro Camera System</h3>
+            <ul>
+                <li><span>Main</span>200 MP, f/1.7, OIS</li>
+                <li><span>Ultra-Wide</span>50 MP, f/1.9 (Upgraded)</li>
+                <li><span>Telephoto</span>50 MP (5x Optical) & 10 MP (3x Optical)</li>
+                <li><span>Selfie</span>12 MP, f/2.2</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Battery & Features</h3>
+            <ul>
+                <li><span>Battery</span>5,000 mAh</li>
+                <li><span>Charging</span>45W Wired Fast Charging</li>
+                <li><span>Intelligence</span>Galaxy AI & Gemini Live Integrated</li>
+                <li><span>Support</span>7 Years of OS & Security Updates</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Presentation Generated by Gemini CLI</p>
+</footer>
+
+</body>
+</html>
